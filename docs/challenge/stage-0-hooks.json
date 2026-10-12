@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit|Bash|PowerShell",
+        "hooks": [{ "type": "command", "command": "python3 \"${CLAUDE_PROJECT_DIR}/.agent/hooks/guard.py\"" }]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [{ "type": "command", "command": "python3 \"${CLAUDE_PROJECT_DIR}/.agent/hooks/gate_status.py\"" }]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [{ "type": "command", "command": "python3 \"${CLAUDE_PROJECT_DIR}/.agent/hooks/archive_approval.py\"" }]
+      }
+    ]
+  }
+}

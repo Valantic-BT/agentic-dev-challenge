@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [],
+    "ask": [
+      "Edit",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Read(/.env)",
+      "Read(/.env.*)",
+      "Edit(/.agent/spec.approved.md)",
+      "Edit(/.agent/hooks/**)",
+      "Edit(/.agent/archive/**)",
+      "Edit(/.claude/**)",
+      "Edit(/tools/**)",
+      "Edit(/.github/**)",
+      "Edit(/AGENTS.md)",
+      "Edit(/CLAUDE.md)",
+      "Bash(rm *)",
+      "Bash(rmdir *)",
+      "Bash(git rm *)",
+      "Bash(git clean *)",
+      "Bash(git push *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(git reset *)",
+      "Bash(python tools/approve_spec.py *)",
+      "Bash(python3 tools/approve_spec.py *)"
+    ]
+  }
+}
